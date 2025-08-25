@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Expiry Scanner</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Food Expiry Date Scanner</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" required>
+      <button type="submit">Scan</button>
+    </form>
+
+    {% if expiry_text %}
+      <h2>Detected Text:</h2>
+      <p>{{ expiry_text }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
